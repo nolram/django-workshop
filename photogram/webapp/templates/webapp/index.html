@@ -1,12 +1,32 @@
-<html>
-    <head>
-        <title>Hello</title>
-    </head>
-    <body>
+{% load static humanize %}
+<html lang="pt-BR">
+
+<head>
+    <title>Página Inicial</title>
+    <link href="{% static 'webapp/css/index.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="form">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form }}
-        <button type="submit">Salvar</button>
+            <button type="submit">Salvar</button>
         </form>
-    </body>
+    </div>
+    <article>
+        <div>
+            {% for p in posts %}
+                <!-- {{ p }} -->
+                <img src="{{ p.photo.url }}" alt="Foto" height="200px" width="200px">
+                <p>{{ p.message }}</p>
+                <!-- <h4>{{ p.fk_user.username }} - {{ p.created_at|date:"SHORT_DATE_FORMAT" }}</h4> -->
+                <!-- <h4>{{ p.fk_user.username }} - {{ p.created_at|date:"d/m/Y - H:i:s" }}</h4> -->
+                <!-- Necessita do django.contrib.humanize no INSTALLED_APPS do arquivo settings.py -->
+                <h4>{{ p.fk_user.username }} - {{ p.created_at|naturalday }}</h4>
+            {% endfor %}
+        </div>
+    </article>
+</body>
+
 </html>
