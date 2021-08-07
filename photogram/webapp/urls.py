@@ -1,8 +1,8 @@
 
-from .views import hello, post_photo
+from .views import hello, index
 from django.urls import path
 
 urlpatterns = [
     path('hello/', hello),
-    path('', post_photo)
+    path('', index)
 ]
