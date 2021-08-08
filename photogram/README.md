@@ -23,6 +23,18 @@ $ python manage.py runserver
 
 - [Django: Salvando arquivos em desenvolvimento](https://docs.djangoproject.com/en/3.2/howto/static-files/#serving-files-uploaded-by-a-user-during-development)
 
+- [Django: Model Forms](https://docs.djangoproject.com/en/3.2/topics/forms/modelforms/)
+
+- [Django: Autenticação](https://docs.djangoproject.com/en/3.2/topics/auth/default/)
+
+- [Django: File Upload](https://docs.djangoproject.com/en/3.2/topics/http/file-uploads/)
+
+- [Django: Admin Apps](https://docs.djangoproject.com/en/3.2/ref/contrib/admin/)
+
 - [Django: Templates Tags and Filters](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/)
 
 - [Django: Humanize](https://docs.djangoproject.com/en/3.2/ref/contrib/humanize/)
+
+- [Django Toolbar Debug](https://django-debug-toolbar.readthedocs.io/en/latest/installation.html)
+
+- [Django: Making Queries](https://docs.djangoproject.com/en/3.2/topics/db/queries/#making-queries)
