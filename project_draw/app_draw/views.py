@@ -20,10 +20,10 @@ def index(request: HttpRequest) -> HttpResponse:
             Winner.objects.bulk_create(winners_db)
             return render(
                 request,
-                "app_draw/winners.html",
+                "app_draw/winners_css.html",
                 {"form": form, "winners": winners},
             )
     else:
         form = PrizeDrawForm()
     last_winners = Winner.objects.all().order_by('-created_at')[:5]
-    return render(request, "app_draw/index.html", {"form": form, "last_winners": last_winners})
+    return render(request, "app_draw/index_css.html", {"form": form, "last_winners": last_winners})
