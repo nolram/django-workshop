@@ -5,8 +5,8 @@ Uma aplicação simples escrita em Python com o framework Django para realizar s
 ## Requisitos
 ```
 gunicorn==20.1.0
-Django==3.2.5
-psycopg2==2.9.1
+Django==4.0.5
+psycopg2==2.9.3
 ```
 
 ## Run Dev
